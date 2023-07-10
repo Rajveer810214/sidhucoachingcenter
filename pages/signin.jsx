@@ -26,7 +26,7 @@ function Signin() {
         alert('Login failed');
       }
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       setLoading(false); // Set loading to false
       alert('Login failed');
     }

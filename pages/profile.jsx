@@ -23,12 +23,11 @@ function Profile() {
           headers: { 'Content-Type': 'application/json', 'auth-token': localStorage.getItem('auth-token') },
         });
         const json = await response.json();
-        console.log(json);
         if (json.success === true) {
           setDetails({ name: json.user.name, email: json.user.email });
         }
       } catch (error) {
-        console.error(error);
+        setLoading(false);
       } finally {
         setLoading(false); // Set loading to false after the operation is complete
       }

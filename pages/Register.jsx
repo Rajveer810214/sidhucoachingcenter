@@ -38,7 +38,7 @@ function Register() {
         alert('Signup failed');
       }
     } catch (error) {
-      console.error(error);
+      // console.error(error);
       alert('Signup failed');
     }
   };
